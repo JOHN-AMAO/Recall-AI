@@ -29,9 +29,11 @@ const SignUp = () => {
         {/* Social Sign-in Buttons */}
         <View className="flex flex-col gap-8 space-y-6 mb-8">
           {/* Google Button */}
+          <Link href="/home" asChild>
           <TouchableOpacity 
             className="flex-row items-center justify-center space-x-3 bg-gray-900 p-4 rounded-2xl border border-gray-800"
           >
+           
             <View className="w-6 h-6 items-center justify-center">
               <View className="w-5 h-5 bg-white rounded-full overflow-hidden items-center justify-center">
                 <Text className="text-sm font-bold text-blue-500">G</Text>
@@ -40,8 +42,9 @@ const SignUp = () => {
             <Text className="text-white font-medium text-base">
               Continue with Google
             </Text>
+            
           </TouchableOpacity>
-
+          </Link>
           {/* Apple Button */}
           <TouchableOpacity 
             className="flex-row items-center justify-center space-x-3 bg-gray-900 p-4 rounded-2xl border border-gray-800"
