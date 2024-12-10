@@ -3,6 +3,7 @@ import { Home, Calendar, Book, Bell, Grid, Search, Trophy, User } from 'lucide-r
 import { BlurView } from 'expo-blur';
 import { Platform, View } from 'react-native';
 
+
 export default function Layout() {
   return (
     <Tabs
@@ -66,7 +67,7 @@ export default function Layout() {
         }}
       />
       <Tabs.Screen
-        name="schedule"
+        name="today"
         options={{
           headerShown: false,
           tabBarIcon: ({ color, focused }) => (
