@@ -1,26 +1,9 @@
 import React from 'react'
 import { Linking } from 'react-native'
-import { useOAuth } from '@clerk/clerk-expo'
+
 
 import { TouchableOpacity, View, Text } from 'react-native'
 
-// const { startOAuthFlow } = useOAuth({ strategy: 'oauth_google' })
-
-//   const onPress = React.useCallback(async () => {
-//     try {
-//       const { createdSessionId, signIn, signUp, setActive } = await startOAuthFlow({
-//         redirectUrl: Linking.createURL('/dashboard', { scheme: 'myapp' }),
-//       })
-
-//       if (createdSessionId) {
-//         setActive!({ session: createdSessionId })
-//       } else {
-//         // Use signIn or signUp for next steps such as MFA
-//       }
-//     } catch (err) {
-//       console.error('OAuth error', err)
-//     }
-//   }, [])
 
 
 const GoogleOAuth = () => {

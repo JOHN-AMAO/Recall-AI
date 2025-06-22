@@ -32,7 +32,7 @@ const TodayStudyPlan = () => {
 
   const studyTasks = [
     {
-      title: "Introduction to AI",
+      title: "Business Fundamentals",
       duration: "12 min", 
       icon: (props) => <Brain {...props} />,
       bgColor: 'bg-purple-600',

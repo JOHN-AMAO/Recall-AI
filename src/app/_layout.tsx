@@ -6,7 +6,7 @@ import {
   configureReanimatedLogger,
   ReanimatedLogLevel,
 } from 'react-native-reanimated';
-import { ClerkProvider, ClerkLoaded} from '@clerk/clerk-expo';
+
 import { tokenCache } from '../../lib/auth';
 import { StatusBar } from "react-native";
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
@@ -16,37 +16,28 @@ configureReanimatedLogger({
   strict: false
 });
 
-const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY;
-if (!publishableKey) {
-  throw new Error('EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY is not set.');
-}
-
 export default function Layout() {
   return (
-    <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
-      <ClerkLoaded>
-        {/* <StatusBar backgroundColor="#7c3aed" barStyle="light-content" /> */}
-        <GestureHandlerRootView>
-        <Stack screenOptions={{ headerShown: false }}>
-          <Stack.Screen 
-          name="onboarding" 
-        />
-        
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <StatusBar backgroundColor="#7c3aed" barStyle="light-content" />
+      <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen 
-          name="/signin" 
+          name="onboarding"
+          options={{ headerShown: false }}
         />
         <Stack.Screen 
-          name="/signup" 
+          name="signin"
+          options={{ headerShown: false }}
         />
         <Stack.Screen 
-          name="(main)" 
-          options={{ headerShown: false }} 
+          name="signup"
+          options={{ headerShown: false }}
         />
-       
-        </Stack>
-         </GestureHandlerRootView>
-      </ClerkLoaded>
-      
-    </ClerkProvider>
+        <Stack.Screen 
+          name="(main)"
+          options={{ headerShown: false }}
+        />
+      </Stack>
+    </GestureHandlerRootView>
   )
 }
