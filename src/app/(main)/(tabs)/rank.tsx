@@ -7,7 +7,7 @@ import {
   SafeAreaView,
   Share,
 } from 'react-native';
-import { Users, Trophy, Share2, Crown, Medal, DollarSign } from 'lucide-react-native';
+import { Users, Trophy, Share2, Crown, Medal, DollarSign } from '@/components/icons';
 
 interface RankingUser {
   id: string;

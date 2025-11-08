@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, SafeAreaView, TouchableOpacity, Animated, Dimensions } from 'react-native';
-import { Brain, Calendar, Trophy, Target, ChevronRight, Sparkles } from 'lucide-react-native';
+import { Brain, Calendar, Trophy, Target, ChevronRight, Sparkles } from '@/components/icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import MaskedView from '@react-native-masked-view/masked-view';
 import { Link } from 'expo-router';

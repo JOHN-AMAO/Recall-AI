@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity, ScrollView, SafeAreaView, Dimensions } from "react-native";
-import { User, Mail, Phone, MapPin, Edit2, LogOut, BookOpen, Trophy, Settings, Star, Award } from "lucide-react-native";
+import { User, Mail, Phone, MapPin, Edit2, LogOut, BookOpen, Trophy, Settings, Star, Award } from "@/components/icons";
 import { LinearGradient } from 'expo-linear-gradient';
 
 const { width } = Dimensions.get('window');

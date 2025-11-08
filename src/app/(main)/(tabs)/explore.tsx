@@ -8,28 +8,14 @@ import {
   TextInput,
   Image,
 } from 'react-native';
-import { Search, Filter, Star, Clock, Users, BookOpen } from 'lucide-react-native';
+import { Search, Filter, Star, Clock, Users, BookOpen } from '@/components/icons';
 import Animated, {
   useAnimatedStyle,
   withSpring,
   useSharedValue,
 } from 'react-native-reanimated';
 
-const ExploreScreen = () => {
-  const scaleValue = useSharedValue(0.9);
-  const opacityValue = useSharedValue(0);
-
-  useEffect(() => {
-    scaleValue.value = withSpring(1);
-    opacityValue.value = withSpring(1);
-  }, []);
-
-  const animatedStyle = useAnimatedStyle(() => ({
-    transform: [{ scale: scaleValue.value }],
-    opacity: opacityValue.value,
-  }));
-
-  const StudyPlanCard = ({ title, author, rating, duration, students, topics }) => (
+const StudyPlanCard = ({ title, author, rating, duration, students, topics }) => (
     <TouchableOpacity className="bg-gray-800 rounded-2xl p-4 mb-4">
       <View className="flex-row justify-between items-start mb-3">
         <View className="flex-1">
@@ -62,6 +48,20 @@ const ExploreScreen = () => {
       </View>
     </TouchableOpacity>
   );
+
+export default function ExploreScreen() {
+  const scaleValue = useSharedValue(0.9);
+  const opacityValue = useSharedValue(0);
+
+  useEffect(() => {
+    scaleValue.value = withSpring(1);
+    opacityValue.value = withSpring(1);
+  }, []);
+
+  const animatedStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: scaleValue.value }],
+    opacity: opacityValue.value,
+  }));
 
   return (
     <SafeAreaView className="flex-1 bg-gray-900">
@@ -128,6 +128,4 @@ const ExploreScreen = () => {
       </Animated.View>
     </SafeAreaView>
   );
-};
-
-export default ExploreScreen;
+}

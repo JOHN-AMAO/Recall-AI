@@ -1,5 +1,5 @@
 import { Tabs } from 'expo-router';
-import { Home, Calendar, Book, Bell, Grid, Search, Trophy, User } from 'lucide-react-native';
+import { Home, Calendar, Book, Bell, Grid, Search, Trophy, User } from '@/components/icons';
 import { BlurView } from 'expo-blur';
 import { Platform, View } from 'react-native';
 

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { View, Text, TouchableOpacity, Alert, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CameraView, CameraType, useCameraPermissions } from 'expo-camera';
-import { Camera, RotateCcw, Zap, ZapOff, X } from 'lucide-react-native';
+import { Camera, RotateCcw, Zap, ZapOff, X } from '@/components/icons';      
 import { router } from 'expo-router';
 
 const CameraScreen = () => {

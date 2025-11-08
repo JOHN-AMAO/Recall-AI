@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, SafeAreaView, Dimensions, Animated } from 'react-native';
-import { Clock, BookOpen, Brain, User, Calendar, Search, Layout, CheckCheck, ArrowRight } from 'lucide-react-native';
+import { Clock, BookOpen, Brain, User, Calendar, Search, Layout, CheckCheck, ArrowRight } from '@/components/icons';
 import { format, addDays, subDays } from 'date-fns';
 import { Link, router, useNavigation } from 'expo-router';
 

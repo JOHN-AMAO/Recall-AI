@@ -6,13 +6,7 @@ module.exports = function (api) {
       "nativewind/babel",
     ],
     plugins: [
-      [
-        'react-native-reanimated/plugin',
-        {
-          globals: ['__enableLogs'],
-          disableInvokeExpressions: true,
-        },
-      ],
+      'react-native-reanimated/plugin',
     ],
   };
 };

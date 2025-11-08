@@ -11,13 +11,13 @@ import Animated, {
 } from 'react-native-reanimated';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import { snapPoint } from 'react-native-redash';
-import { Home, Share2 } from 'lucide-react-native';
+import { Home, Share2 } from '@/components/icons';
 import { router } from 'expo-router';
 
 const { width, height } = Dimensions.get('window');
 const SNAP_POINTS = [-width, 0, width];
 
-const StudySlider = () => {
+export default function StudySlider() {
   const [currentPage, setCurrentPage] = useState(0);
   const slidePosition = useSharedValue(0);
   const translateX = useSharedValue(0);
@@ -254,6 +254,4 @@ const StudySlider = () => {
       </View>
     </SafeAreaView>
   );
-};
-
-export default StudySlider;
+}

@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity, ScrollView } from "react-native";
-import { Cog, Lock, Bell, LogOut, User, ChevronRight } from "lucide-react-native";
+import { Cog, Lock, Bell, LogOut, User, ChevronRight } from "@/components/icons";
 
 export default function Settings() {
   return (

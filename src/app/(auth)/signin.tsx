@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
-import { ChevronLeft, Apple } from 'lucide-react-native';
+import { ChevronLeft, Apple } from '@/components/icons';
 import { Link } from 'expo-router';
 const SignUp = () => {
   return (

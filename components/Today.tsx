@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity, SafeAreaView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Clock, BookOpen, Brain, User, Calendar, Search, Layout } from 'lucide-react-native';
+import { Clock, BookOpen, Brain, User, Calendar, Search, Layout } from '@/components/icons';
 import { format, addDays, subDays } from 'date-fns';
 
 const TodayStudyPlan = () => {

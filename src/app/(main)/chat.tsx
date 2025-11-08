@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, FlatList, SafeAreaView, KeyboardAvoidingView, Platform, StatusBar } from 'react-native';
 import { useColorScheme } from 'react-native';
 import { useWindowDimensions } from 'react-native';
-import { Send, Bot } from 'lucide-react-native';
+import { Send, Bot } from '@/components/icons';
 
 interface Message {
   id: string;

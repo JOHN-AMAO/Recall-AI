@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Audio } from 'expo-av';
-import { ArrowLeft, Mic, StopCircle, Save } from 'lucide-react-native';
+import { ArrowLeft, Mic, StopCircle, Save } from '@/components/icons';
 import Animated, { 
   useAnimatedStyle,
   withRepeat,
@@ -11,7 +11,7 @@ import Animated, {
   useSharedValue
 } from 'react-native-reanimated';
 
-const Record = () => {
+export default function Record() {
   const navigation = useNavigation();
   const [recording, setRecording] = useState<Audio.Recording | null>(null);
   const [isRecording, setIsRecording] = useState(false);
@@ -25,13 +25,15 @@ const Record = () => {
   }));
 
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: ReturnType<typeof setInterval> | undefined;
     if (isRecording) {
       interval = setInterval(() => {
         setDuration(prev => prev + 1);
       }, 1000);
     }
-    return () => clearInterval(interval);
+    return () => {
+      if (interval) clearInterval(interval);
+    };
   }, [isRecording]);
 
   async function startRecording() {
@@ -139,6 +141,4 @@ const Record = () => {
       </View>
     </SafeAreaView>
   );
-};
-
-export default Record;
+}
